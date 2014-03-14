@@ -23,7 +23,7 @@ theme_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[magenta]%}$(toon)%{$reset_color%} %~/ %{$reset_color%}${vcs_info_msg_0_}%{$reset_color%}'
-
+PROMPT='%{$fg_bold[red]%}->%{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}>'
+#PROMPT='%{$fg_bold[red]%} %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 autoload -U add-zsh-hook
 add-zsh-hook precmd theme_precmd
